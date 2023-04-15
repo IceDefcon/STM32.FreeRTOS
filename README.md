@@ -9,5 +9,6 @@ GPIO driven by the FreeRTOS
 
 # TODO
 
-1. Test FreeRTOS on GPIO to Status LED
-2. Upgrade RTOS using MIT sources
+1. Upgrade RTOS using lates MIT sources
+
+# ICE
