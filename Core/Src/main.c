@@ -120,15 +120,6 @@ int main(void)
   /* Start scheduler */
   osKernelStart();
   /* We should never get here as control is now taken by the scheduler */
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
-  while (1)
-  {
-    /* USER CODE END WHILE */
-
-    /* USER CODE BEGIN 3 */
-  }
-  /* USER CODE END 3 */
 }
 
 /**
@@ -213,7 +204,10 @@ void StartDefaultTask(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 1);
+    osDelay(100);
+    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 0);
+    osDelay(100);
   }
   /* USER CODE END 5 */
 }
